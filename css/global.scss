@@ -1,0 +1,274 @@
+@import 'vars.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    font-family: "Gilroy";
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+    background-color: $color-white;
+  }
+
+ul,
+ol{
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body{
+    &.active{
+        .header{
+            background-color: transparent !important;
+        }
+        .header__links{
+            svg{
+                path{
+                    fill: $color-white;
+                }
+            }
+        }
+        .menu__link{
+            color: $color-whiteDark;
+            &::after{
+                background-color: $color-white;
+            }
+            &_active{
+                color: $color-white;
+                border-color: $color-white;
+            }
+        }
+        .menu__logo{
+            svg{
+                path{
+                    fill: $color-white;
+                }
+            }
+        }
+        .title-main {
+            color: $color-white;
+            pointer-events: none;
+        }
+        .stroke-text{
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1.5px $color-white;
+        }
+        .title-color-not{
+            .stroke-text{
+                -webkit-text-stroke: 1.5px $color-black;
+            }
+        }
+        .btn-main{
+            color: $color-white;
+            &::before{
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.container{
+    max-width: 1130px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.title-main{
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 800;
+    max-width: 981px;
+    text-align: center;
+    
+}
+
+.stroke-text{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px $color-black;
+}
+
+.btn-main{
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 48px;
+    border: 1px solid $color-grey;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 24.35px;
+        background-color: $color-black;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 5;
+        transform: translate(-50%, -50%);
+    }
+    &:hover{
+        span{
+            &:nth-child(1) {
+                clip-path: polygon(0 50%, 1px 50%, 1px 0, 0 0);
+                transition-delay: 0ms;
+            }
+            &:nth-child(2) {
+                clip-path: polygon(0 0, 100% 0, 100% 1px, 0 1px);
+                transition-delay: 225ms;
+            }
+            &:nth-child(3) {
+                clip-path: polygon(calc(100% - 1px) 100%, calc(100% - 1px) 0, 100% 0, 100% 100%);
+                transition-delay: 450ms;
+            }
+            &:nth-child(4) {
+                clip-path: polygon(0 100%, 0 calc(100% - 1px), 100% calc(100% - 1px), 100% 100%);
+                transition-delay: 675ms;
+            }
+            &:nth-child(5) {
+                clip-path: polygon(0 100%, 0 50%, 1px 50%, 1px 100%);
+                transition-delay: 900ms;
+            }
+        }
+    }
+    span{
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        border: 1px solid $color-black;
+        transition: clip-path 225ms ease;
+        &:nth-child(1) {
+            clip-path: polygon(0 50%, 1px 50%, 1px 50%, 0 50%);
+            transition-delay: 900ms;
+        }
+        &:nth-child(2) {
+            clip-path: polygon(0 0, 0 0, 0 1px, 0 1px);
+            transition-delay: 675ms;
+        }
+        &:nth-child(3) {
+            clip-path: polygon(calc(100% - 1px) 0, calc(100% - 1px) 0, 100% 0, 100% 0);
+            transition-delay: 450ms;
+        }
+        &:nth-child(4) {
+            clip-path: polygon(100% 100%, 100% calc(100% - 1px), 100% calc(100% - 1px), 100% 100%);
+            transition-delay: 225ms;
+        }
+        &:nth-child(5) {
+            clip-path: polygon(0 100%, 0 100%, 1px 100%, 1px 100%);
+            transition-delay: 0ms;
+        }
+    }
+}
+
+.title-small {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    color: $color-black;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -80px;
+        transform: translateY(-50%);
+        background-color: $color-black;
+        width: 40px;
+        height: 1px;
+    }
+    
+}
+
+.btn-animate-circle{
+    
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+        span{
+            &:nth-child(1){
+                clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+                transition-delay: 0ms;
+            }
+            &:nth-child(2){
+                clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+                transition-delay: 300ms;
+            }
+            &:nth-child(3){
+                clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+                transition-delay: 600ms;
+            }
+            &:nth-child(4){
+                clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+                transition-delay: 900ms;
+            }
+        }
+    }
+    span{
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid $color-white;
+        transition: clip-path 300ms cubic-bezier(0.500, 0.500, 0.500, 0.500);
+        
+        &:nth-child(1) {
+            clip-path: polygon(50% 0, 100% 0, 100% 0, 50% 0);
+            transition-delay: 900ms;
+        }
+        &:nth-child(2) {
+            clip-path: polygon(50% 50%, 100% 50%, 100% 50%, 50% 50%);
+            transition-delay: 600ms;
+        }
+        &:nth-child(3) {
+            clip-path: polygon(0 100%, 50% 100%, 50% 100%, 0 100%);
+            transition-delay: 300ms;
+        }
+        &:nth-child(4) {
+            clip-path: polygon(0 50%, 50% 50%, 50% 50%, 0 50%);
+            transition-delay: 0ms;
+        }
+    }
+    svg{
+        path{
+            fill: $color-white;
+        }
+    }
+}
+
+

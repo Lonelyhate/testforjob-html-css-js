@@ -1,0 +1,326 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: "Gilroy";
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+  background-color: #fff;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body.active .header {
+  background-color: transparent !important;
+}
+
+body.active .header__links svg path {
+  fill: #fff;
+}
+
+body.active .menu__link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.active .menu__link::after {
+  background-color: #fff;
+}
+
+body.active .menu__link_active {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.active .menu__logo svg path {
+  fill: #fff;
+}
+
+body.active .title-main {
+  color: #fff;
+  pointer-events: none;
+}
+
+body.active .stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px #fff;
+}
+
+body.active .title-color-not .stroke-text {
+  -webkit-text-stroke: 1.5px #222222;
+}
+
+body.active .btn-main {
+  color: #fff;
+}
+
+body.active .btn-main::before {
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1130px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-main {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 800;
+  max-width: 981px;
+  text-align: center;
+}
+
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px #222222;
+}
+
+.btn-main {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 48px;
+  border: 1px solid #EBEBEB;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-main::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 24.35px;
+  background-color: #222222;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn-main:hover span:nth-child(1) {
+  -webkit-clip-path: polygon(0 50%, 1px 50%, 1px 0, 0 0);
+          clip-path: polygon(0 50%, 1px 50%, 1px 0, 0 0);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.btn-main:hover span:nth-child(2) {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 1px, 0 1px);
+          clip-path: polygon(0 0, 100% 0, 100% 1px, 0 1px);
+  -webkit-transition-delay: 225ms;
+          transition-delay: 225ms;
+}
+
+.btn-main:hover span:nth-child(3) {
+  -webkit-clip-path: polygon(calc(100% - 1px) 100%, calc(100% - 1px) 0, 100% 0, 100% 100%);
+          clip-path: polygon(calc(100% - 1px) 100%, calc(100% - 1px) 0, 100% 0, 100% 100%);
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+
+.btn-main:hover span:nth-child(4) {
+  -webkit-clip-path: polygon(0 100%, 0 calc(100% - 1px), 100% calc(100% - 1px), 100% 100%);
+          clip-path: polygon(0 100%, 0 calc(100% - 1px), 100% calc(100% - 1px), 100% 100%);
+  -webkit-transition-delay: 675ms;
+          transition-delay: 675ms;
+}
+
+.btn-main:hover span:nth-child(5) {
+  -webkit-clip-path: polygon(0 100%, 0 50%, 1px 50%, 1px 100%);
+          clip-path: polygon(0 100%, 0 50%, 1px 50%, 1px 100%);
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+.btn-main span {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 1px solid #222222;
+  -webkit-transition: -webkit-clip-path 225ms ease;
+  transition: -webkit-clip-path 225ms ease;
+  transition: clip-path 225ms ease;
+  transition: clip-path 225ms ease, -webkit-clip-path 225ms ease;
+}
+
+.btn-main span:nth-child(1) {
+  -webkit-clip-path: polygon(0 50%, 1px 50%, 1px 50%, 0 50%);
+          clip-path: polygon(0 50%, 1px 50%, 1px 50%, 0 50%);
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+.btn-main span:nth-child(2) {
+  -webkit-clip-path: polygon(0 0, 0 0, 0 1px, 0 1px);
+          clip-path: polygon(0 0, 0 0, 0 1px, 0 1px);
+  -webkit-transition-delay: 675ms;
+          transition-delay: 675ms;
+}
+
+.btn-main span:nth-child(3) {
+  -webkit-clip-path: polygon(calc(100% - 1px) 0, calc(100% - 1px) 0, 100% 0, 100% 0);
+          clip-path: polygon(calc(100% - 1px) 0, calc(100% - 1px) 0, 100% 0, 100% 0);
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+
+.btn-main span:nth-child(4) {
+  -webkit-clip-path: polygon(100% 100%, 100% calc(100% - 1px), 100% calc(100% - 1px), 100% 100%);
+          clip-path: polygon(100% 100%, 100% calc(100% - 1px), 100% calc(100% - 1px), 100% 100%);
+  -webkit-transition-delay: 225ms;
+          transition-delay: 225ms;
+}
+
+.btn-main span:nth-child(5) {
+  -webkit-clip-path: polygon(0 100%, 0 100%, 1px 100%, 1px 100%);
+          clip-path: polygon(0 100%, 0 100%, 1px 100%, 1px 100%);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.title-small {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 40px;
+  color: #222222;
+  position: relative;
+}
+
+.title-small::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #222222;
+  width: 40px;
+  height: 1px;
+}
+
+.btn-animate-circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-animate-circle:hover span:nth-child(1) {
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+          clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.btn-animate-circle:hover span:nth-child(2) {
+  -webkit-clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.btn-animate-circle:hover span:nth-child(3) {
+  -webkit-clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+          clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+.btn-animate-circle:hover span:nth-child(4) {
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+          clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+.btn-animate-circle span {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  -webkit-transition: -webkit-clip-path 300ms cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  transition: -webkit-clip-path 300ms cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  transition: clip-path 300ms cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  transition: clip-path 300ms cubic-bezier(0.5, 0.5, 0.5, 0.5), -webkit-clip-path 300ms cubic-bezier(0.5, 0.5, 0.5, 0.5);
+}
+
+.btn-animate-circle span:nth-child(1) {
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 0, 50% 0);
+          clip-path: polygon(50% 0, 100% 0, 100% 0, 50% 0);
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+.btn-animate-circle span:nth-child(2) {
+  -webkit-clip-path: polygon(50% 50%, 100% 50%, 100% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 100% 50%, 100% 50%, 50% 50%);
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+.btn-animate-circle span:nth-child(3) {
+  -webkit-clip-path: polygon(0 100%, 50% 100%, 50% 100%, 0 100%);
+          clip-path: polygon(0 100%, 50% 100%, 50% 100%, 0 100%);
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.btn-animate-circle span:nth-child(4) {
+  -webkit-clip-path: polygon(0 50%, 50% 50%, 50% 50%, 0 50%);
+          clip-path: polygon(0 50%, 50% 50%, 50% 50%, 0 50%);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.btn-animate-circle svg path {
+  fill: #fff;
+}
+/*# sourceMappingURL=global.css.map */

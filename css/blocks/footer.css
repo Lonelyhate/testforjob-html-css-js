@@ -1,0 +1,25 @@
+.footer__container {
+  border-top: 1px solid #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0;
+}
+
+.footer__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #222222;
+}
+
+.footer__text span {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 20px;
+}
+/*# sourceMappingURL=footer.css.map */

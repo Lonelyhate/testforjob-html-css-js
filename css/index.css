@@ -1,0 +1,9 @@
+@import 'vars.css';
+@import 'fonts.css';
+@import 'global.css';
+@import 'style.css';
+@import 'blocks/header.css';
+@import 'blocks/inner.css';
+@import 'blocks/examples.css';
+@import 'blocks/contacts.css';
+@import 'blocks/footer.css';
